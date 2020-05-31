@@ -2,6 +2,8 @@ import time
 import json
 import requests
 from discord_webhooks import DiscordWebhooks
+import datetime
+from datetime import timedelta 
 
 pid = '0'
 WEBHOOK_URL = 'https://discordapp.com/api/webhooks/716398429995270174/H3mAVClDg6gEnsjNipNe4hsePPwHx37UYIR9b5PFDFf8-jKrXkP8rOEQ5ipMjSRMmEdB'
@@ -61,6 +63,7 @@ while True:
             webhook.add_field(name="Shipping", value = shipping_message)
             webhook.add_field(name="Release Date:", value=start)
             webhook.set_footer(icon_url = 'http://drive.google.com/uc?id=16ZsNOlvQmwI2rwjA0vnT7Z5mLiHGMqwk', text='Powered by Sudu Frenzy')
+            webhook.send()
         else:
             print("No Change")
     except:
