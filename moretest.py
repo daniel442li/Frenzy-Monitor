@@ -4,7 +4,7 @@ myclient = pymongo.MongoClient("mongodb://daniel442li:KANQzahn5dF3VzZ@cluster0-s
 
 print(myclient.list_database_names())
 
-mydb = myclient["video"]
+mydb = myclient["sudufrenzy"]
 
 
 mycol = mydb["movieScratch"]
