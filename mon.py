@@ -6,7 +6,7 @@ import datetime
 from datetime import timedelta 
 import time
 
-webhooks = ['https://discordapp.com/api/webhooks/716398429995270174/H3mAVClDg6gEnsjNipNe4hsePPwHx37UYIR9b5PFDFf8-jKrXkP8rOEQ5ipMjSRMmEdB', 'https://discordapp.com/api/webhooks/724822916331733032/PD1NKLSagHSMBs9ELwZV7u8cYFW8L9Gp3BWKHMiAGS2DRE2gWM7xWetiDxs-09n-BqIZ']
+webhooks = ['https://discordapp.com/api/webhooks/649033400228773908/nptrpL3C3plQGZ52vwFw6PHs5PBjy8E2pAwmUA-jXVM_FNnr_B8SERTfYWvXDUsoGW_w', 'https://discordapp.com/api/webhooks/716398429995270174/H3mAVClDg6gEnsjNipNe4hsePPwHx37UYIR9b5PFDFf8-jKrXkP8rOEQ5ipMjSRMmEdB', 'https://discordapp.com/api/webhooks/724822916331733032/PD1NKLSagHSMBs9ELwZV7u8cYFW8L9Gp3BWKHMiAGS2DRE2gWM7xWetiDxs-09n-BqIZ']
 
 
 while True:
