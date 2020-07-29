@@ -30,9 +30,9 @@ while True:
     'accept-language': 'en-US,en;q=0.9',
     'if-none-match': 'W/"62640607c0903a0d9f04a2f00aacbd05"'
     }
-    data = requests.request("GET", url, headers=headers, data = payload, allow_redirects = False)
     
     try:
+        data = requests.request("GET", url, headers=headers, data = payload, allow_redirects = False)
         response = json.loads(data.text)
         flashSales = (response['flashsales'])
 
@@ -45,7 +45,10 @@ while True:
                     webhook = DiscordWebhooks(WEBHOOK_URL)
                     title = products['title']
                     url = "https://frenzy.sale/" + products['password']
-                    image_url = (products['image_urls'][0])
+                    try:
+                        image_url = (products['image_urls'][0])
+                    except:
+                        image_url = ''
                     price = str(products['price_range']['max'])
                     currency = str(products['shop']['currency'])
                     totPrice = price + ' ' + currency
@@ -63,7 +66,7 @@ while True:
                         second = '00'
                     else:
                         second = start.minute
-                    start = f'{start.month}/{start.day}/{start.year}, {start.hour}:{minute}:{second} EST'
+                    start = (f'{start.month}/{start.day}/{start.year}, {start.hour}:{minute}:{second} EST')
 
                     webhook.set_content(title=title, url=url)
                     webhook.set_thumbnail(url=image_url)
@@ -82,6 +85,5 @@ while True:
         time.sleep(10)
     except Exception as E:
         print(E)
-        print(data.text)
         time.sleep(10)
 
